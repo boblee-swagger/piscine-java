@@ -1,7 +1,7 @@
 public class Palindrome {
     public static boolean isPalindrome(String s) {
         if (s == null || s.isEmpty()) {
-            return true;
+            return false;
         }
 
         String cleanS = s.toLowerCase(); 
