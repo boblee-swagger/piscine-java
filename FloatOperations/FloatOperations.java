@@ -5,7 +5,7 @@ public class FloatOperations {
     }
 
     public static float divideTwoFloats(float a, float b) {
-        return a-b;
+        return a/b;
     }
 
 }
