@@ -7,7 +7,7 @@ public class StringConcat {
         }else if (s1 == null && s2 != null){
             return s2;
         }else{
-            return "";
+            return null;
         }
     }
 }
