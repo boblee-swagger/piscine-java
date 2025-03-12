@@ -7,12 +7,16 @@ public class ComputeArray {
         int[] result = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             int item = array[i];
-            if (item % 3 == 0) {
-                result[i] = item * 5;
-            } else if (item % 3 == 1) {
-                result[i] = item + 7;
-            } else {
-                result[i] = item;
+            switch (item % 3) {
+                case 0:
+                    result[i] = item * 5;
+                    break;
+                case 1:
+                    result[i] = item + 7;
+                    break;
+                default:
+                    result[i] = item;
+                    break;
             }
         }
         return result;
