@@ -2,7 +2,7 @@ public class CleanExtract {
     public static String extract(String s) {
 
         String[] substrings = s.split("\\|");
-        StringBuilder result = new StringBuilder(substrings[0].trim()); 
+        StringBuilder result = new StringBuilder(); 
 
         for (String sub : substrings) {
 
