@@ -4,7 +4,7 @@ public class IntOperations{
     }
 
     public static int subTwoIntegers(int a, int b) {
-        return a-b;
+        return b-a;
 
     }
 
