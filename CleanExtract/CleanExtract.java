@@ -29,6 +29,7 @@ public class CleanExtract {
         String[] t = output.split(" ");
         String rs = "";
         for (String str : t){
+            str = str.trim();
             rs = rs.concat(str).concat(" ");
         }
 
