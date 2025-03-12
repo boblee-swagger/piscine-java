@@ -9,7 +9,7 @@ public class CleanExtract {
             if (sub.startsWith(".") && sub.endsWith(".")) {
                 int firstDot = sub.indexOf(".");
                 int lastDot = sub.lastIndexOf(".");
-                String str = sub.substring(firstDot + 1, lastDot).trim();
+                String str = sub.substring(firstDot , lastDot).trim();
                 if (!str.isEmpty()) { 
                     result.append(" ").append(str);
                 }
