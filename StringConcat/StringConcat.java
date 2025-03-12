@@ -1,12 +1,13 @@
 public class StringConcat {
     public static String concat(String s1, String s2) {
-        StringBuilder sb = new StringBuilder();
-        if (s1 != null) {
-            sb.append(s1);
+        if (s1 != null && s2 != null){
+            return s1.concat(s2);
+        }else if (s1 != null && s2 == null){
+            return s1;
+        }else if (s1 == null && s2 != null){
+            return s2;
+        }else{
+            return "";
         }
-        if (s2 != null) {
-            sb.append(s2);
-        }
-        return sb.toString();
     }
 }
