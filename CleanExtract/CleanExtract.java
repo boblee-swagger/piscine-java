@@ -18,17 +18,22 @@ public class CleanExtract {
             }
         }
 
+
         for (int i = 0; i < result.length()-1; i++){
             if (result.charAt(i) == '.'){
                 result.deleteCharAt(i);
             }
         }
-        return result.toString().trim();
-    }
 
-     public static void main(String[] args) {
-        System.out.println(CleanExtract.extract("The|. quick brown. | what do you ..| .fox .|. Jumps over the lazy dog. ."));
-        System.out.println(CleanExtract.extract("  | Who am .I  | .love coding,  |  |.  Coding is fun . | ...  "));
+        String output = result.toString();
+        String[] t = output.split(" ");
+        String rs = "";
+        for (String str : t){
+            rs = rs.concat(str).concat(" ");
+        }
+
+
+        return rs.trim();
     }
 }
 
