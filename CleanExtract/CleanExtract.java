@@ -1,7 +1,7 @@
 public class CleanExtract {
     public static String extract(String s) {
 
-        if (s.length() != 1){
+        if (s.trim().length() != 0){
              String[] substrings = s.split("\\|");
             StringBuilder result = new StringBuilder(); 
 
