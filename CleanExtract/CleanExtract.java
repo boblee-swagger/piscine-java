@@ -22,7 +22,7 @@ public class CleanExtract {
             }
         }
 
-        for (int i = 0; i < result.length(); i++) {
+        for (int i = 0; i < result.length()-1; i++) {
             if (result.charAt(i) == '.') {
                 result.deleteCharAt(i);
                 i--; 
