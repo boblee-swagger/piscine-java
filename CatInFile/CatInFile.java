@@ -14,7 +14,7 @@ public class CatInFile {
                 FileWriter fw = new FileWriter(args[0]);
             ){
                 String Input = bf.readLine();
-                fw.write(Input+"\n"); 
+                fw.write(Input); 
                 
             }
         }
