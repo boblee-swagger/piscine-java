@@ -16,7 +16,6 @@ public class Cat {
 
                 while(line != null){
                     sb.append(line);
-                    sb.append(System.lineSeparator());
                     line = br.readLine();
                 }
                 System.out.println(sb.toString());
