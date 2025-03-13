@@ -17,7 +17,6 @@ public class CatInFile {
                 String line;
                 while((line = bf.readLine()) != null){
                     fw.write(line);
-                    fw.write(System.lineSeparator());
                 }
             }
         }
