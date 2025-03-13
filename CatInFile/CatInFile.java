@@ -2,9 +2,9 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.FileWriter;
-//import java.nio.file.Files;
-//import java.nio.file.Paths;
-//import java.io.ByteArrayInputStream;
+// import java.nio.file.Files;
+// import java.nio.file.Paths;
+// import java.io.ByteArrayInputStream;
 
 public class CatInFile {
     public static void cat(String[] args) throws IOException {
@@ -13,14 +13,17 @@ public class CatInFile {
                 BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
                 FileWriter fw = new FileWriter(args[0]);
             ){
-                String Input = bf.readLine();
-                fw.write(Input); 
                 
+                String line;
+                while((line = bf.readLine()) != null){
+                    fw.write(line);
+                    fw.write(System.lineSeparator());
+                }
             }
         }
     }
 
-    // public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
     //     String input = "input file test\n";
     //     ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes());
     //     System.setIn(in);
