@@ -17,13 +17,10 @@ public class Cat {
                 while ((bytesRead = fileInput.read(buffer)) != -1) {
                     System.out.write(buffer, 0, bytesRead);
                 }
-                
                 // Flush to ensure all data is written
                 System.out.flush();
-            }
-            
+            }   
         }
-        
     }
 
     public static void main(String[] args) throws IOException {
