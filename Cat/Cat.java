@@ -19,7 +19,7 @@ public class Cat {
                     sb.append(System.lineSeparator());
                     line = br.readLine();
                 }
-                System.out.print(sb.toString());
+                System.out.println(sb.toString());
             }
         }
     }
