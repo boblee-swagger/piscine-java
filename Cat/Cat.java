@@ -17,7 +17,7 @@ public class Cat {
                     sb.append(System.lineSeparator());
                     line = br.readLine();
                 }
-                System.out.println(sb.toString());
+                System.out.print(sb.toString());
             }
         }
     }
@@ -44,5 +44,8 @@ public class Cat {
         // // Reset out to stdout
         // System.setOut(stdout);
         // System.out.println(output2.equals(""));
+
+        cat(new String[]{"input.txt"});
+
     }
 }
