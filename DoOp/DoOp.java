@@ -29,12 +29,12 @@ public class DoOp {
                             System.exit(0);
                         }
                     }
-                    default -> throw new AssertionError("Invalid operator: " + operand);
+                    default -> System.out.println("Error");
             }
             return Integer.toString(result);
         }
         System.out.println("Error\nit depends on the input.");
-        return "";   
+        return "Error";   
     }
 
     public static void main(String[] args) {
