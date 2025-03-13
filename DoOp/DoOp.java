@@ -29,7 +29,10 @@ public class DoOp {
                             System.exit(0);
                         }
                     }
-                    default -> System.out.println("Error");
+                    default -> {
+                        System.out.println("Error");
+                        System.exit(0);
+                    }
             }
             return Integer.toString(result);
         }
