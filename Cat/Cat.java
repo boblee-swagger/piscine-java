@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 
 public class Cat {
     //read content of a file an print it to stdout
@@ -23,27 +25,27 @@ public class Cat {
     }
 
     public static void main(String[] args) throws IOException {
-        // PrintStream stdout = System.out;
+        PrintStream stdout = System.out;
 
-        // ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        // PrintStream printStream = new PrintStream(outputStream);
-        // System.setOut(printStream);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        System.setOut(printStream);
 
-        // cat(new String[]{"input.txt"});
-        // String output = outputStream.toString();
-        // // Reset out to stdout
-        // System.setOut(stdout);
-        // System.out.println(output.equals("test input file\n"));
+        cat(new String[]{"input.txt"});
+        String output = outputStream.toString();
+        // Reset out to stdout
+        System.setOut(stdout);
+        System.out.println(output.equals("test input file\n"));
 
-        // ByteArrayOutputStream outputStream2 = new ByteArrayOutputStream();
-        // PrintStream printStream2 = new PrintStream(outputStream2);
-        // System.setOut(printStream2);
+        ByteArrayOutputStream outputStream2 = new ByteArrayOutputStream();
+        PrintStream printStream2 = new PrintStream(outputStream2);
+        System.setOut(printStream2);
 
-        // cat(new String[]{});
-        // String output2 = outputStream2.toString();
-        // // Reset out to stdout
-        // System.setOut(stdout);
-        // System.out.println(output2.equals(""));
+        cat(new String[]{});
+        String output2 = outputStream2.toString();
+        // Reset out to stdout
+        System.setOut(stdout);
+        System.out.println(output2.equals(""));
 
         cat(new String[]{"input.txt"});
 
