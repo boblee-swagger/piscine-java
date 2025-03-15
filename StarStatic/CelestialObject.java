@@ -52,8 +52,10 @@ public class CelestialObject {
         this.name = name;
     }
 
-    public static double getDistanceBetween(CelestialObject ob1, CelestialObject ob2){
-        return (ob1.getX() + ob2.getX()) + (ob1.getY() + ob2.getY());
+
+
+    public static float  getDistanceBetween(CelestialObject ob1, CelestialObject ob2){
+        return (float)((ob1.getX() + ob2.getX()) + (ob1.getY() + ob2.getY()));
     }
 
     public static double getDistanceBetweenInKm(CelestialObject ob1, CelestialObject ob2){
@@ -61,12 +63,4 @@ public class CelestialObject {
 
     }
 
-     public static void main(String[] args) {
-        CelestialObject defaultStar = new CelestialObject();
-        CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
-
-        System.out.println(CelestialObject.getDistanceBetween(defaultStar, earth));
-        System.out.println(CelestialObject.getDistanceBetweenInKm(defaultStar, earth));
-        System.out.println(CelestialObject.KM_IN_ONE_AU);
-    }
 }
