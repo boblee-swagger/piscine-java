@@ -47,7 +47,7 @@ public class CelestialObject {
         return this.name;
     }
 
-    public void setX(String name){
+    public void setName(String name){
         this.name = name;
     }
 }
