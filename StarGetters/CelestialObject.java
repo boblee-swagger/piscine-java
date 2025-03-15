@@ -34,6 +34,15 @@ public class CelestialObject {
         this.y = y;
     }
 
+    public double getZ(){
+        return this.z;
+    }
+
+    public void setZ(double z){
+        this.z = z;
+    }
+
+
      public String getName(){
         return this.name;
     }
