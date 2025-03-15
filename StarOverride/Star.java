@@ -27,6 +27,10 @@ public class Star extends CelestialObject{
     }
 
     public boolean equals(Star st){
+
+        if (st == null){
+            return false;
+        }
         return this.hashCode() == st.hashCode(); 
     }
 
