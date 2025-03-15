@@ -27,14 +27,15 @@ public class Star extends CelestialObject{
     }
 
     public boolean equals(Star st){
+        if (this == st)
+            return true;
+        if (st == null || getClass() != st.getClass())
+            return false;
+        if (!super.equals(st))
+            return false;
 
-        if (st == null){
-            return false;
-        }
-        if (st instanceof CelestialObject){
-            return false;
-        }
-        return this.hashCode() == st.hashCode(); 
+        return Double.compare(this.magnitude, st.magnitude) == 0;
+    
     }
 
    
