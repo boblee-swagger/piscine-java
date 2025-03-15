@@ -80,7 +80,9 @@ public class CelestialObject {
             if (this.name.equals(ob.getName())){
                 if ((this.x==ob.getX())){
                     if ((this.y==ob.getY())){
-                        return true;
+                        if ((this.z==ob.getZ())){
+                            return true;
+                        }
                     }
                 }
             }
