@@ -31,6 +31,9 @@ public class Star extends CelestialObject{
         if (st == null){
             return false;
         }
+        if (st instanceof CelestialObject){
+            return false;
+        }
         return this.hashCode() == st.hashCode(); 
     }
 
