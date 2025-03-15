@@ -26,7 +26,8 @@ public class Star extends CelestialObject{
         return Objects.hash(this.getName(), this.getX(), this.getY(), this.getZ(), this.magnitude);
     }
 
-    public boolean equals(Star st){
+    @Override
+    public boolean equals(Object st){
         if (this == st)
             return true;
         if (st == null || getClass() != st.getClass())
