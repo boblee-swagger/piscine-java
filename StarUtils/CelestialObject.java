@@ -71,7 +71,7 @@ public class CelestialObject {
 
     @Override
     public String toString(){
-        String out =  String.format("%s is positionned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
+        String out =  String.format("%s is positioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
         return out;
     }
 
