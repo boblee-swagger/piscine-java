@@ -54,7 +54,7 @@ public class CelestialObject {
 
     public static double getDistanceBetween(CelestialObject ob1, CelestialObject ob2){
         double x = ob2.getX() - ob1.getX();
-        double y = ob2.getX() - ob1.getX();
+        double y = ob2.getY() - ob1.getY();
         double z = ob2.getZ() - ob1.getZ();
         return Math.sqrt((x * x) + (y * y) + (z * z));
     }
