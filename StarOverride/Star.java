@@ -5,6 +5,9 @@ import java.util.Objects;
 public class Star extends CelestialObject{
     private double magnitude;
 
+
+    public Star(){}
+
     public Star(String name, double x, double y, double z, double magnitude){
         super(name, x, y, z);
         this.magnitude = magnitude;
