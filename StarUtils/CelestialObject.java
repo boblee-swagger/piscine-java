@@ -76,10 +76,12 @@ public class CelestialObject {
     }
 
     public boolean equals(CelestialObject ob){
-        if (this.name.equals(ob.getName())){
-            if ((this.x==ob.getX())){
-                if ((this.y==ob.getY())){
-                    return true;
+        if (ob != null){
+            if (this.name.equals(ob.getName())){
+                if ((this.x==ob.getX())){
+                    if ((this.y==ob.getY())){
+                        return true;
+                    }
                 }
             }
         }
