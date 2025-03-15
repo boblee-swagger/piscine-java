@@ -37,13 +37,12 @@ public class Star extends CelestialObject{
             return false;
 
         Star star = (Star) obj;
-        return this.hashCode()== star.hashCode();
+        return Double.compare(this.magnitude, star.magnitude) == 0;
     }
 
    
     @Override
-    public String toString(){
-        String out =  String.format("%s is positioned at (%.3f, %.3f, %.3f, %.3f)", this.getName(), this.getX(), this.getY(), this.getZ(), this.getMagnitude());
-        return out;
+    public String toString() {
+        return String.format("%s shines at the %.3f magnitude", getName(), magnitude);
     }
 }
