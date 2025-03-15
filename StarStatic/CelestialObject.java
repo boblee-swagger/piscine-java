@@ -52,14 +52,12 @@ public class CelestialObject {
         this.name = name;
     }
 
-
-
-    public static float  getDistanceBetween(CelestialObject ob1, CelestialObject ob2){
-        return (float)((ob1.getX() + ob2.getX()) + (ob1.getY() + ob2.getY()));
+    public static double getDistanceBetween(CelestialObject ob1, CelestialObject ob2){
+        return (ob1.getX() + ob2.getX()) + (ob1.getY() + ob2.getY());
     }
 
-    public static double getDistanceBetweenInKm(CelestialObject ob1, CelestialObject ob2){
-        return (getDistanceBetween(ob1, ob2)) *  CelestialObject.KM_IN_ONE_AU;
+    public static float getDistanceBetweenInKm(CelestialObject ob1, CelestialObject ob2){
+        return (float)((getDistanceBetween(ob1, ob2)) *  CelestialObject.KM_IN_ONE_AU);
 
     }
 
