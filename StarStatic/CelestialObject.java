@@ -57,7 +57,7 @@ public class CelestialObject {
     }
 
     public static double getDistanceBetweenInKm(CelestialObject ob1, CelestialObject ob2){
-        return ((ob1.x + ob2.x) + (ob1.y + ob2.y)) / CelestialObject.KM_IN_ONE_AU ;
+        return ((ob1.getX() + ob2.getX()) + (ob1.getY() + ob2.getY())) / CelestialObject.KM_IN_ONE_AU ;
 
     }
 }
