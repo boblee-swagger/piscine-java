@@ -9,7 +9,7 @@ public class Galaxy {
     }
 
     public List<CelestialObject> getCelestialObjects(){
-        return this.celestialObjects;
+        return celestialObjects;
     }
 
     public void addCelestialObject(CelestialObject obj){
