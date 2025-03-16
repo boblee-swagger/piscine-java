@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Galaxy extends CelestialObject {
-    private List<CelestialObject> celestialObject;
+    private final List<CelestialObject> celestialObject;
 
     public Galaxy(){
         this.celestialObject = new ArrayList();
@@ -15,5 +15,7 @@ public class Galaxy extends CelestialObject {
     public void addCelestialObject(CelestialObject obj){
         this.celestialObject.add(obj);
     }
+
+
 
 }
