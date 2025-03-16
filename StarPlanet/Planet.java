@@ -38,11 +38,11 @@ public class Planet extends CelestialObject {
 
     @Override
     public String toString(){
-        return String.format("%s circles around %s at the _ AU", this.getName(), this.centerStar.getName());
+        return String.format("%s circles around %s at the %.3f AU", this.getName(), this.centerStar.getName(), this.distanceWithCenters());
     }
 
-    public double distanceWithCenters(Planet planet) {
-        return Planet.getDistanceBetween(planet, planet.centerStar);
+    public double distanceWithCenters() {
+        return Planet.getDistanceBetween(this, this.centerStar);
     }
 
 
