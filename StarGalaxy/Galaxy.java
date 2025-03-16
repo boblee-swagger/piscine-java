@@ -8,8 +8,8 @@ public class Galaxy {
         this.celestialObjects = new ArrayList<>();
     }
 
-    public String getCelestialObjects(){
-        return this.celestialObjects.toString();
+    public List<CelestialObject> getCelestialObjects(){
+        return this.celestialObjects;
     }
 
     public void addCelestialObject(CelestialObject obj){
