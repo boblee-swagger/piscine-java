@@ -29,11 +29,15 @@ public class Planet extends CelestialObject {
 
     @Override
     public boolean equals(Object obj){
-        if (obj != null){
-            Planet planet = (Planet) obj;
-            return this.hashCode() == planet.centerStar.hashCode();
-        }
-        return false;
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        if (!super.equals(obj))
+            return false;
+
+        Planet planet = (Planet) obj;
+        return Objects.equals(centerStar, planet.getCenterStar());
     }
 
     @Override

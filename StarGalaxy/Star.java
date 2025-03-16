@@ -31,11 +31,15 @@ public class Star extends CelestialObject{
  
     @Override
     public boolean equals(Object obj) {
-        if (obj != null){
-            Star star = (Star) obj;
-            return this.hashCode() == star.hashCode();
-        }
-        return false;
+       if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        if (!super.equals(obj))
+            return false;
+
+        Star star = (Star) obj;
+        return Double.compare(this.magnitude, star.magnitude) == 0;
     }
 
    
