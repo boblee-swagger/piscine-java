@@ -27,19 +27,21 @@ public class Galaxy {
         
         for (CelestialObject celestialObj : this.celestialObjects){
             if (celestialObj instanceof Planet){
-                PlanetsMass += celestialObj.getMass();
-                celestObj.put("Planet", PlanetsMass);
+                PlanetsMass += Integer.valueOf(celestialObj.getMass());
             }else if (celestialObj instanceof Star){
-                StarsMass += celestialObj.getMass();
-                celestObj.put("Star", StarsMass);
+                StarsMass += Integer.valueOf(celestialObj.getMass());
             }else{
-                OthersMass += celestialObj.getMass();
-                celestObj.put("Other", OthersMass);
+                OthersMass += Integer.valueOf(celestialObj.getMass());
             }
         }
+        celestObj.put("Planet", PlanetsMass);
+        celestObj.put("Star", StarsMass);
+        celestObj.put("Other", OthersMass);
 
         return celestObj;
     }
+
+
 
 }
 
