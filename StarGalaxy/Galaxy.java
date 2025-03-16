@@ -5,11 +5,11 @@ public class Galaxy {
     private List<CelestialObject> celestialObjects;
 
     public Galaxy(){
-        this.celestialObjects = new ArrayList<>();
+        this.celestialObjects = new ArrayList<CelestialObject>();
     }
 
     public List<CelestialObject> getCelestialObjects(){
-        return celestialObjects;
+        return this.celestialObjects;
     }
 
     public void addCelestialObject(CelestialObject obj){
