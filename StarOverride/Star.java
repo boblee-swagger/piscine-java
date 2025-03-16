@@ -36,8 +36,10 @@ public class Star extends CelestialObject{
         if (!super.equals(obj))
             return false;
 
-        Star star = (Star) obj;
-        return Double.compare(this.magnitude, star.magnitude) == 0;
+       //Star star = (Star) obj;
+        //return Double.compare(this.magnitude, star.magnitude) == 0;
+
+        return this.hashCode() == obj.hashCode();
     }
 
    
