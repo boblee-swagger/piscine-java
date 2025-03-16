@@ -24,14 +24,14 @@ public class Planet extends CelestialObject {
 
     @Override
     public int hashCode(){
-        return Objects.hash(this.hashCode(), this.centerStar.hashCode());
+        return Objects.hash(this.centerStar.hashCode());
     }
 
     @Override
     public boolean equals(Object obj){
         if (obj != null){
             Planet planet = (Planet) obj;
-            return this.hashCode() == planet.hashCode();
+            return this.hashCode() == planet.centerStar.hashCode();
         }
         return false;
     }
