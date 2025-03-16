@@ -69,8 +69,7 @@ public class CelestialObject {
 
     @Override
     public String toString(){
-        String out =  String.format("%s is positioned at (%.3f, %.3f, %.3f)\n", this.name, this.x, this.y, this.z);
-        return out;
+        return String.format("%s is positioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
     }
 
     public boolean equals(CelestialObject ob){
