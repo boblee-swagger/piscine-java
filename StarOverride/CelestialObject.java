@@ -75,15 +75,7 @@ public class CelestialObject {
 
     public boolean equals(CelestialObject ob){
         if (ob != null){
-            if (this.name.equals(ob.getName())){
-                if ((this.x==ob.getX())){
-                    if ((this.y==ob.getY())){
-                        if ((this.z==ob.getZ())){
-                            return true;
-                        }
-                    }
-                }
-            }
+            return this.hashCode() == ob.hashCode();
         }
         return false;
     }
