@@ -72,11 +72,16 @@ public class CelestialObject {
         return String.format("%s is positioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
     }
 
-    public boolean equals(CelestialObject ob){
-        if (ob != null){
-            return this.hashCode() == ob.hashCode();
-        }
-        return false;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CelestialObject that = (CelestialObject) o;
+        return Double.compare(that.x, x) == 0 &&
+            Double.compare(that.y, y) == 0 &&
+            Double.compare(that.z, z) == 0 &&
+            Objects.equals(name, that.name);
+
     }
 
     @Override
