@@ -16,6 +16,5 @@ public class Galaxy {
         this.celestialObjects.add(obj);
     }
 
-
-
 }
+
