@@ -5,7 +5,7 @@ public class Galaxy extends CelestialObject {
     private final List<CelestialObject> celestialObject;
 
     public Galaxy(){
-        this.celestialObject = new ArrayList();
+        this.celestialObject = new ArrayList<>();
     }
 
     public List<CelestialObject> getCelestialObjects(){
