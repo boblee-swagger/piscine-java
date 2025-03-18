@@ -1,7 +1,7 @@
 public class Character {
     private final int maxHealth = 20;
     private int currentHealth;
-    private final String name = "Legalos";
+    private final String name = "Legolas";
 
     public Character(String name, int maxHealth){
         this.currentHealth = maxHealth;
