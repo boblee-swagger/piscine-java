@@ -1,9 +1,10 @@
 public class Character {
-    private final int maxHealth = 20;
+    private final int maxHealth = 0;
     private int currentHealth;
-    private final String name = "Legolas";
+    private final String name;
 
     public Character(String name, int maxHealth){
+        this.name = name;
         this.currentHealth = maxHealth;
     }
 
