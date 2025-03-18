@@ -28,7 +28,7 @@ public class Character {
     }
 
     public void takeDamage(int n){
-        if (n > 0){
+        if (this.currentHealth > 0){
             this.currentHealth -= n;
         }
     }
