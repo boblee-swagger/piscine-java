@@ -11,7 +11,7 @@ public class Character {
         return this.maxHealth;
     }
 
-     public int getCurrentHealth(){
+    public int getCurrentHealth(){
         return this.currentHealth;
     }
 
@@ -34,7 +34,7 @@ public class Character {
     }
 
     public void attack(Character player){
-        this.takeDamage(9);
+        player.takeDamage(9);
     }
 
 
