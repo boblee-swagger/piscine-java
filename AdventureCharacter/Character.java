@@ -33,7 +33,7 @@ public class Character {
         }
     }
 
-    public void attack(Character player){
+    public static void attack(Character player){
         player.takeDamage(9);
     }
 
