@@ -1,5 +1,5 @@
 public class Character {
-    private final int maxHealth = 0;
+    private final int maxHealth = 20;
     private int currentHealth;
     private final String name = null;
 
