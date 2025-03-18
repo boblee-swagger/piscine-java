@@ -5,6 +5,7 @@ public class Character {
 
     public Character(String name, int maxHealth){
         this.name = name;
+        this.maxHealth = maxHealth;
         this.currentHealth = maxHealth;
     }
 
