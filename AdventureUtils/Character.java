@@ -50,20 +50,17 @@ public class Character {
         StringBuilder output = new StringBuilder();
         if (!Character.allCharacters.isEmpty()){
             output.append("------------------------------------------\n");
-            output.append("Characters currently fighting : \n");
+            output.append("Characters currently fighting :\n");
             for (Character character : Character.allCharacters) {
-                output.append(String.format(" - %s\n", character.toString()));
+                output.append(" - ").append(character.toString()).append("\n");
             }
             output.append("------------------------------------------");
-            return output.toString();
-
         }else{
-              return """
-                    ------------------------------------------
-                    Nobody's fighting right now !
-                    ------------------------------------------
-                    """;
+            output.append("------------------------------------------\n");
+            output.append("Nobody's fighting right now !\n");
+            output.append("------------------------------------------\n");
         }
+        return output.toString();
     }
 
     public static Character fight(Character player1, Character player2){
