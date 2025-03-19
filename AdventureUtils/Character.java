@@ -52,7 +52,7 @@ public class Character {
             output.append("------------------------------------------\n");
             output.append("Characters currently fighting :\n");
             for (Character character : Character.allCharacters) {
-                output.append(" - ").append(character.toString()).append("\n");
+                output.append(String.format(" - %s\n",character.toString()));
             }
             output.append("------------------------------------------\n");
         }else{
