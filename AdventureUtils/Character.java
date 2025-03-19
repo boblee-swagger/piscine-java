@@ -11,7 +11,7 @@ public class Character {
         this.name = name;
         this.maxHealth = maxHealth;
         this.currentHealth = maxHealth;
-        this.allCharacters.add(this);
+        allCharacters.add(this);
     }
 
     public int getMaxHealth(){
