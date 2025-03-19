@@ -46,21 +46,25 @@ public class Character {
         player.takeDamage(9);
     }
 
-    public static String printStatus(){
-        StringBuilder output = new StringBuilder();
-        if (!Character.allCharacters.isEmpty()){
-            output.append("------------------------------------------\n");
-            output.append("Characters currently fighting : \n");
-            for (Character character : Character.allCharacters) {
-                output.append(String.format(" - %s\n", character.toString()));
+    
+    public static String printStatus() {
+        if (allCharacters.isEmpty()) {
+            return """
+                    ------------------------------------------
+                    Nobody's fighting right now !
+                    ------------------------------------------
+                    """;
+        } else {
+            StringBuilder result = new StringBuilder();
+            result.append("------------------------------------------\n");
+            result.append("Characters currently fighting :\n");
+            for (Character character : allCharacters) {
+                result.append(" - ").append(character.toString()).append("\n");
             }
-            output.append("------------------------------------------\n");
-        }else{
-            output.append("------------------------------------------\n");
-            output.append("Nobody's fighting right now !\n");
-            output.append("------------------------------------------\n");
+            result.append("------------------------------------------\n");
+
+            return result.toString();
         }
-        return output.toString();
     }
 
     public static Character fight(Character player1, Character player2){
