@@ -49,12 +49,13 @@ public class Character {
     public static String printStatus(){
         StringBuilder output = new StringBuilder();
         if (!Character.allCharacters.isEmpty()){
-            output.append("------------------------------------------\n");
-            output.append("Characters currently fighting : \n");
-            for (Character character : Character.allCharacters) {
-                output.append(" - ").append(character.toString()).append("\n");
+           StringBuilder result = new StringBuilder();
+            result.append("------------------------------------------\n");
+            result.append("Characters currently fighting :\n");
+            for (Character character : allCharacters) {
+                result.append(" - ").append(character.toString()).append("\n");
             }
-            output.append("------------------------------------------\n");
+            result.append("------------------------------------------\n");
         }else{
             output.append("------------------------------------------\n");
             output.append("Nobody's fighting right now !\n");
