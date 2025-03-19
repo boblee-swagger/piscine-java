@@ -5,7 +5,7 @@ public class Character {
     private final int maxHealth;
     private int currentHealth;
     private final String name;
-    private static List<Character> allCharacters = new ArrayList<>();
+    private static final List<Character> allCharacters = new ArrayList<>();
 
     public Character(String name, int maxHealth){
         this.name = name;
@@ -50,7 +50,7 @@ public class Character {
         StringBuilder output = new StringBuilder();
         if (!Character.allCharacters.isEmpty()){
             output.append("------------------------------------------\n");
-            output.append("Characters currently fighting : \n");
+            output.append("Characters currently fighting :\n");
             for (Character character : Character.allCharacters) {
                 output.append(String.format(" - %s\n", character.toString()));
             }
@@ -77,19 +77,5 @@ public class Character {
             }
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(Character.printStatus());
-
-        Character aragorn = new Character("Aragorn", 20);
-        Character uruk = new Character("Uruk", 15);
-
-        System.out.println(Character.printStatus());
-
-        Character winner = Character.fight(aragorn, uruk);
-
-        System.out.println(winner.toString());
-        System.out.println(Character.printStatus());
     }
 }
