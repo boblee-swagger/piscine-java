@@ -65,21 +65,17 @@ public class Character {
 
     public static Character fight(Character player1, Character player2){
 
-        if (player2.currentHealth > 0){
+        while(player2.currentHealth > 0 && player1.currentHealth > 0){
             Character.attack(player2);
             if (player2.currentHealth <= 0){
                 return player1;
             }
-        }else{
-            return player1;
-        }
 
-        if (player1.currentHealth > 0){
             Character.attack(player1);
             if (player1.currentHealth <= 0){
                 return player2;
             }
         }
-        return Character.fight(player1, player2);
+        return null;
     }
 }
