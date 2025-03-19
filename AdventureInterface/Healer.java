@@ -1,4 +1,4 @@
 public interface Healer{
-    public int getHealCapacity();
-    public void Heal(Character character);
+    int getHealCapacity();
+    void Heal(Character character);
 }
