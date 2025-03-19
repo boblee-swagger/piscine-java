@@ -11,5 +11,4 @@ public class Monster extends Character{
         }
         return String.format("%s is a monster with %d HP", this.getName(), this.getCurrentHealth());
     }
-
 }
