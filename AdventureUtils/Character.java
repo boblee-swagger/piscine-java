@@ -54,7 +54,7 @@ public class Character {
             for (Character character : Character.allCharacters) {
                 output.append(" - ").append(character.toString()).append("\n");
             }
-            output.append("------------------------------------------");
+            output.append("------------------------------------------\n");
         }else{
             output.append("------------------------------------------\n");
             output.append("Nobody's fighting right now !\n");
