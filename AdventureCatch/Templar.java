@@ -6,6 +6,7 @@ public class Templar extends Character implements Tank, Healer {
         this.shield = shield;
         this.healCapacity = healCapacity;
         this.adventureClass = "templar";
+        this.isAlive = true;
     }
 
     @Override
@@ -29,11 +30,15 @@ public class Templar extends Character implements Tank, Healer {
 
     @Override
     public void takeDamage(int damage) throws DeadCharacterException{
+
+        if (!this.isAlive){
+            throw new DeadCharacterException(this);
+        }
+
         damage = damage - this.shield;
         if (damage > 0) {
             if (this.getCurrentHealth() - damage < 0) {
                 this.setCurrentHealth(0);
-                throw new DeadCharacterException(this);
             } else {
                 this.setCurrentHealth(this.getCurrentHealth() - damage);
             }

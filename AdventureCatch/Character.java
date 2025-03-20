@@ -7,6 +7,7 @@ public abstract class Character {
     private final String name;
     public String adventureClass;
     private final Weapon weapon;
+    public boolean isAlive;
     private static List<Character> allCharacters = new ArrayList<>();
 
     public Character(String name, int maxHealth, Weapon weapon){
@@ -15,6 +16,7 @@ public abstract class Character {
         this.currentHealth = maxHealth;
         this.weapon = weapon;
         allCharacters.add(this);
+        this.isAlive = true;
     }
 
     public int getMaxHealth(){

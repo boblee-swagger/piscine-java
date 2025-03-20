@@ -5,6 +5,7 @@ public class Sorcerer extends Character implements Healer {
         super(name, maxHealth, weapon);
         this.healCapacity = healCapacity;
         this.adventureClass = "sorcerer";
+        this.isAlive = true;
     }
 
     @Override
@@ -23,9 +24,13 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void takeDamage(int damage) throws  DeadCharacterException{
+
+        if (!this.isAlive){
+            throw new DeadCharacterException(this);
+        }
+        
         if (this.getCurrentHealth() - damage < 0) {
             this.setCurrentHealth(0);
-            throw new DeadCharacterException(this);
         } else {
             this.setCurrentHealth(this.getCurrentHealth() - damage);
         }
