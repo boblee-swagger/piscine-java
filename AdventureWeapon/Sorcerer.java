@@ -22,7 +22,7 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void takeDamage(int damage) {
-        if (this.getCurrentHealth() - damage < 0) {
+        if (this.getCurrentHealth() - damage <= 0) {
             this.setCurrentHealth(0);
         } else {
             this.setCurrentHealth(this.getCurrentHealth() - damage);
@@ -31,6 +31,7 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void attack(Character character) {
+        this.heal(this);
         this.heal(this);
         if (this.getWeapon() != null) {
             character.takeDamage(this.getWeapon().getDamage());

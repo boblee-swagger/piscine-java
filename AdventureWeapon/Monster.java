@@ -30,4 +30,5 @@ public class Monster extends Character{
             character.takeDamage(7);
         }
     }
+    
 }
