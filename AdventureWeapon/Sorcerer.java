@@ -1,6 +1,3 @@
-
-
-
 public class Sorcerer extends Character implements Healer {
     
     private final int healCapacity;
@@ -25,7 +22,6 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void takeDamage(int damage) {
-        this.heal(this);
         if (this.getCurrentHealth() - damage < 0) {
             this.setCurrentHealth(0);
         } else {
@@ -35,6 +31,7 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void attack(Character character) {
+        this.heal(this);
         if (this.getWeapon() != null) {
             character.takeDamage(this.getWeapon().getDamage());
         } else {
