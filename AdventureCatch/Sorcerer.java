@@ -25,6 +25,7 @@ public class Sorcerer extends Character implements Healer {
     public void takeDamage(int damage) throws  DeadCharacterException{
         if (this.getCurrentHealth() - damage <= 0) {
             this.setCurrentHealth(0);
+            throw new DeadCharacterException(this);
         } else {
             this.setCurrentHealth(this.getCurrentHealth() - damage);
         }
