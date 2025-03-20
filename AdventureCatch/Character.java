@@ -46,9 +46,9 @@ public abstract class Character {
         return String.format("%s : %d/%d", this.name, this.currentHealth, this.maxHealth);
     }
 
-    public abstract void takeDamage(int n);
+    public abstract void takeDamage(int n) throws  DeadCharacterException;
 
-    public abstract void attack(Character player);
+    public abstract void attack(Character player) throws DeadCharacterException;
 
     public static String printStatus(){
         StringBuilder output = new StringBuilder();
@@ -70,15 +70,18 @@ public abstract class Character {
     public static Character fight(Character player1, Character player2){
 
         while(player2.currentHealth > 0 && player1.currentHealth > 0){
-            player1.attack(player2);
-            if (player2.currentHealth <= 0){
-                return player1;
-            }
+            try {
+                 player1.attack(player2);
+                if (player2.currentHealth <= 0){
+                    return player1;
+                }
 
-            player2.attack(player1);
-            if (player1.currentHealth <= 0){
-                return player2;
-            }
+                player2.attack(player1);
+                if (player1.currentHealth <= 0){
+                    return player2;
+                }
+            } catch (DeadCharacterException e) {
+            }  
         }
         return null;
     }
