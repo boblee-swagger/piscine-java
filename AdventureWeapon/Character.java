@@ -5,13 +5,14 @@ public abstract class Character {
     private final int maxHealth;
     private int currentHealth;
     private final String name;
-    private Weapon weapon;
+    private final Weapon weapon;
     private static List<Character> allCharacters = new ArrayList<>();
 
     public Character(String name, int maxHealth, Weapon weapon){
         this.name = name;
         this.maxHealth = maxHealth;
         this.currentHealth = maxHealth;
+        this.weapon = weapon;
         allCharacters.add(this);
     }
 

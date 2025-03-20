@@ -13,7 +13,7 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void heal(Character character){
-        if (this.healCapacity + character.getCurrentHealth() <= character.getMaxHealth() ){
+        if (this.healCapacity + character.getCurrentHealth() <= character.getMaxHealth()) {
             character.setCurrentHealth(this.healCapacity + character.getCurrentHealth());
         }else{
             character.setCurrentHealth(character.getMaxHealth());
@@ -31,6 +31,7 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void attack(Character character) {
+        this.heal(this);
         if (this.getWeapon() != null) {
             character.takeDamage(this.getWeapon().getDamage());
         } else {
@@ -45,7 +46,4 @@ public class Sorcerer extends Character implements Healer {
         }
         return String.format("%s is a dead sorcerer. So bad, it could heal %d HP. He has the weapon %s.", this.getName(), this.healCapacity, this.getWeapon().getName());
     }
-
-
-
 }

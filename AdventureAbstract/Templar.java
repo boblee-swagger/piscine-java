@@ -26,7 +26,7 @@ public class Templar extends Character implements Tank, Healer {
         return this.shield;
     }
 
-    @Override
+      @Override
     public void takeDamage(int damage) {
         damage = damage - this.shield;
         if (damage > 0) {
