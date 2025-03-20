@@ -24,6 +24,6 @@ public class Monster extends Character{
                
     @Override
     public void attack(Character player){
-        player.takeDamage(9);
+        player.takeDamage(7);
     }
 }
