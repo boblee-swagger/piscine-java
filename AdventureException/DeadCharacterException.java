@@ -6,8 +6,6 @@ public class DeadCharacterException extends  Exception {
 
     @Override
     public String getMessage(){
-        String name;
-        if (this.character.)
-        return String.format("The <sorcerer | monster | templar> %s is dead.", this.character.getName());
+        return String.format("The %s %s is dead.",this.character.adventureClass, this.character.getName());
     }
 }
