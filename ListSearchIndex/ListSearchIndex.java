@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ListSearchIndex {
     public static Integer findLastIndex(List<Integer> list, Integer value) {
@@ -11,7 +12,7 @@ public class ListSearchIndex {
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
         List<Integer> result = new ArrayList<>();
         for (Integer val : list){
-            if (val == value){
+            if (Objects.equals(val, value)){
                 result.add(list.indexOf(val));
             }
         }
