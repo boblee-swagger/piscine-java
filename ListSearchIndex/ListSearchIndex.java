@@ -22,7 +22,7 @@ public class ListSearchIndex {
 
         for (int i = 0; i < list.size(); i++){
             if (list.get(i).equals(value)){
-                result.add(list.indexOf(i));
+                result.add(i);
             }
         }
         return result;
