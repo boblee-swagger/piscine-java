@@ -21,9 +21,9 @@ public class ListSearchIndex {
         List<Integer> result = new ArrayList<>();
         if (list == null) return result;
 
-        for (Integer val : list){
-            if (Objects.equals(val, value)){
-                result.add(list.indexOf(val));
+        for (int i = 0; i < list.size(); i++){
+            if (Objects.equals(list.get(i), value)){
+                result.add(list.indexOf(i));
             }
         }
         return result;
