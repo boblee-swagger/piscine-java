@@ -7,7 +7,12 @@ public class ListSearchIndex {
         return list.lastIndexOf(value);
     }
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
-        return list.indexOf(value);
+        int result;
+        result = list.indexOf(value);
+        if (result == -1){
+            return null;
+        }
+        return result;
     }
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
         List<Integer> result = new ArrayList<>();
