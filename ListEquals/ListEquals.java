@@ -5,8 +5,6 @@ public class ListEquals{
 
         if (list1 != null && list2 != null){
             return list1.equals(list2);
-        }else if (list1.isEmpty() && list2.isEmpty()){
-            return false;
         }
 
         return false;
