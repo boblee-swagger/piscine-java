@@ -10,5 +10,7 @@ public class ListEquals{
             return false;
         }
 
+        return false;
+
     }
 }
