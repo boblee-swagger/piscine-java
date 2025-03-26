@@ -8,7 +8,7 @@ public class RegexReplace {
         return null;
     }
     // Matches numbers followed by "cm" or "€" (with or without space)
-    return s.replaceAll("(\\d+)\\s*(cm|€)(\\s+|$)", "$1");
+    return s.replaceAll("(\\d+)\\s*(cm|€)(\\s+|$)", "\"$1\"");
 }
     
     public static String obfuscateEmail(String email) {
