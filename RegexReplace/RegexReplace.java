@@ -3,9 +3,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegexReplace {
-    public static String removeUnits(String s) {
-        return s == null ? null : s.replaceAll("(\\d+)(cm|€)\\s", "$1 ");
+   public static String removeUnits(String s) {
+    if (s == null) {
+        return null;
     }
+    // Matches numbers followed by "cm" or "€" (with or without space)
+    return s.replaceAll("(\\d+)\\s*(cm|€)(\\s+|$)", "$1 ");
+}
     
     public static String obfuscateEmail(String email) {
         if (email == null || email.isEmpty()) {
